@@ -1,0 +1,86 @@
+﻿
+.product1 {
+
+    float: left;
+    height: auto;
+    width: 100%;
+    margin-bottom: 30px;
+    box-shadow: 10px 10px 10px 10px #888888;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.image {
+    float: left;
+}
+
+.info {
+    width: 350px;
+    margin-top: 100px;
+    float: right;
+    margin-right: 0;
+    text-decoration: none;
+}
+
+.into, .product1 {
+    position: relative;
+}
+
+.intro {
+    margin-top: 100px;
+    height: auto;
+    width: auto;
+    position: relative;
+}
+
+.btn1 {
+    border: none;
+    border: 1px solid black;
+    padding: 3px 30px;
+    background: transparent;
+    outline: none;
+    margin-bottom: 100px;
+}
+
+    .btn1:hover {
+        border: none;
+        background-color: lightgrey;
+    }
+
+.infoCa {
+    height: auto;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 60px;
+}
+
+.btn2 {
+    margin-right: 100px;
+    border: none;
+    border: 1px solid black;
+    padding: 3px 30px;
+    background: transparent;
+    outline: none;
+    margin-top: 60px;
+    margin-bottom: 35px;
+}
+
+    .btn2:hover {
+        border: none;
+        background-color: lightgrey;
+    }
+
+.infoBodyCa {
+    margin: 50px 0 6px 100px;
+    height: auto;
+    width: 350px;
+    text-align: left;
+}
+
+.infoMuc {
+    text-align: center;
+    float: right;
+    width: 600px;
+    margin-right: 20px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}

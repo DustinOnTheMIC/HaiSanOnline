@@ -1,0 +1,213 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPageWithAnotherMenu.master.cs" Inherits="DoAn.MasterPageWithAnotherMenu" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="CSS/Login-Regis.css" rel="stylesheet" />
+    <link href="CSS/cssMasterPageWithAnotherMenu1.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".hyperlink #HyperLink2 ").click(function () {
+                $('html, #footer').animate({
+                    scrollTop: $("#footer").offset().top
+                }, 1200);
+            });
+            $(".hyperlink #HyperLink3 ").click(function () {
+                $('html, #footer').animate({
+                    scrollTop: $("#footer").offset().top
+                }, 1200);
+            });
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <title></title>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div id="outer">
+                <div id="mainmenu">
+                    <div id="boder-menu">
+                        <div id="left-menu">
+                            <div class="logo">
+                                <h2>Sea Food Shop</h2>
+                            </div>
+                            <div class="hyperlink">
+                                <asp:HyperLink CssClass="hyper" NavigateUrl="home.aspx" ID="HyperLink1" runat="server">Trang chủ</asp:HyperLink>
+                                <asp:HyperLink CssClass="hyper" NavigateUrl="#footer" ID="HyperLink2" runat="server">Giới thiệu</asp:HyperLink>
+                                <asp:HyperLink CssClass="hyper" NavigateUrl="#footer" ID="HyperLink3" runat="server">Liên hệ</asp:HyperLink>
+                            </div>
+                        </div>
+
+                        <div id="right-menu">
+                            <div class="login">
+                                <%--<asp:HyperLink CssClass="hyper" NavigateUrl="LoginForm.aspx" ID="HyperLink4" runat="server"><h4 style="margin-top:10px">Login</h4></asp:HyperLink>--%>
+                                <asp:LinkButton ID="lbtnLogin" CssClass="hyper" runat="server" OnClick="lbtnLogin_Click"><h4 style="margin-top:10px">Login</h4></asp:LinkButton>
+                            </div>
+
+                            <asp:LinkButton Style="text-decoration: none; margin-top: 5px" ID="btnPayForm" OnClick="btnPayForm_Click"
+                                CommandArgument='<%#Eval("userLogin") %>' runat="server" Height="40px">
+                                    <h4 style="margin-top:5px;color:black">Cart</h4>
+                            </asp:LinkButton>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <asp:Panel ID="Panel1" Visible="false" runat="server">
+                        <div class="box" style="top:778%">
+                            <h2>Login</h2>
+                            <div class="form">
+                                <label class="lbl">User name</label>
+                                <asp:TextBox CssClass="inputBox" ID="tbUserName" runat="server"></asp:TextBox>
+
+                            </div>
+                            <div class="form">
+                                <label class="lbl">Password</label>
+                                <asp:TextBox CssClass="inputBox" ID="tbPassword" runat="server" TextMode="Password"></asp:TextBox>
+
+                            </div>
+                            <div style="margin-bottom: 20px;">
+                                <asp:Label CssClass="lbl1" ID="lbl" runat="server" Text=""></asp:Label>
+                                <br />
+                                <asp:RequiredFieldValidator ValidationGroup="Login" CssClass="lbl1" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Bạn chưa nhập tên đăng nhập" ControlToValidate="tbUserName"></asp:RequiredFieldValidator>
+                                <br />
+                                <asp:RequiredFieldValidator ValidationGroup="Login" CssClass="lbl1" ID="RequiredFieldValidator2" runat="server" ErrorMessage="Bạn chưa nhập mật khẩu" ControlToValidate="tbPassword"></asp:RequiredFieldValidator>
+                            </div>
+                            <asp:Button ID="btnLogin" ValidationGroup="Login" CssClass="button" runat="server" OnClick="btnLogin_Click" Text="Login" />
+                            <asp:Button ID="btnRegister" CssClass="button" runat="server" OnClick="btnRegister_Click" Text="Register" />
+                            <div style="margin-top:20px">
+                                <asp:Button ID="btnExit" CssClass="button" runat="server" ValidationGroup="abc" OnClick="btnExit1_Click" Text="Exit" />
+                            </div>
+                        </div>
+
+                    </asp:Panel>
+                </div>
+                <div>
+                    <asp:Panel ID="Panel2" runat="server" Visible="false">
+                        <div class="box" style="top:778%">
+                            <h2 style="color: #00008B">Register</h2>
+                            <div class="form">
+                                <label class="lbl">User name</label>
+                                <asp:TextBox CssClass="inputBox" ID="tbUserName1" runat="server"></asp:TextBox>
+
+                            </div>
+                            <div class="form">
+                                <label class="lbl">Password</label>
+                                <asp:TextBox CssClass="inputBox" ID="tbPassword1" runat="server" TextMode="Password"></asp:TextBox>
+
+                            </div>
+                            <div class="form">
+                                <label class="lbl">Re-password</label>
+                                <asp:TextBox CssClass="inputBox" ID="tbRePass" runat="server" TextMode="Password"></asp:TextBox>
+
+                            </div>
+                            <div class="form">
+                                <label class="lbl">Name</label>
+                                <asp:TextBox CssClass="inputBox" ID="tbName" runat="server"></asp:TextBox>
+
+                            </div>
+                            <div class="form">
+                                <label class="lbl">Phone number</label>
+                                <asp:TextBox CssClass="inputBox" ID="tbSDT" runat="server"></asp:TextBox>
+
+                            </div>
+
+                            <div>
+                                <asp:Label CssClass="lbl1" ID="lblMessage" runat="server" Text=""></asp:Label>
+                                <br />
+                                <div>
+                                    <asp:RequiredFieldValidator CssClass="lbl1" ValidationGroup="Regis" ID="RequiredFieldValidator3" runat="server" ErrorMessage="Chưa nhập tên đăng nhập" ControlToValidate="tbUserName1"></asp:RequiredFieldValidator>
+                                    <br />
+                                    <asp:RequiredFieldValidator CssClass="lbl1" ValidationGroup="Regis" ID="RequiredFieldValidator4" runat="server" ErrorMessage="Chưa nhập mật khẩu" ControlToValidate="tbPassword1"></asp:RequiredFieldValidator>
+                                    <br />
+                                    <asp:RequiredFieldValidator CssClass="lbl1" ValidationGroup="Regis" ID="RequiredFieldValidator5" runat="server" ErrorMessage="Bạn chưa nhập tên" ControlToValidate="tbName"></asp:RequiredFieldValidator>
+                                    <br />
+                                    <asp:RequiredFieldValidator CssClass="lbl1" ValidationGroup="Regis" ID="RequiredFieldValidator6" runat="server" ErrorMessage="Bạn chưa nhập số điện thoại" ControlToValidate="tbSDT"></asp:RequiredFieldValidator>
+                                    <br />
+                                    <asp:CompareValidator CssClass="lbl1" ValidationGroup="Regis" ID="CompareValidator1" runat="server" ErrorMessage="Mật khẩu không khớp" ControlToCompare="tbPassword1" ControlToValidate="tbRePass"></asp:CompareValidator>
+                                </div>
+                            </div>
+                            <asp:Button ID="btnSubmit" CssClass="button" runat="server" ValidationGroup="Regis" Text="Submit" OnClick="btnSubmit_Click"/>
+                            <asp:Button ID="btnExit1" CssClass="button" runat="server" ValidationGroup="abc" OnClick="btnExit_Click" Text="Exit" />
+                        </div>
+
+                    </asp:Panel>
+                </div>
+            </div>
+            <asp:ContentPlaceHolder ID="header" runat="server">
+                <div class="intro">
+                    <h1 id="intro" style="text-align: center">Make Yourself An Order&nbsp;</h1>
+                </div>
+            </asp:ContentPlaceHolder>
+            <asp:Label ID="Label1" runat="server"><h3>Kind of Product</h3></asp:Label>
+
+            <div class="menu">
+                <asp:DataList ID="DataList1" runat="server" RepeatDirection="Horizontal">
+                    <ItemTemplate>
+                        <div class="cssbtn">
+                            <asp:LinkButton CssClass="btn" ID="btnLoaiSP" runat="server" CommandArgument='<%#Eval("maloai") %>' OnClick="btnLoaiSP_Click" Text='<%#Eval("tenloai")%>'></asp:LinkButton>
+                        </div>
+                    </ItemTemplate>
+                </asp:DataList>
+            </div>
+
+            <div class="content">
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+
+            </div>
+            <div id="footer">
+                <div class="Info">
+                    <h4>BÙI ĐỨC TÍN</h4>
+                    <a>Address:QuangNgai city - Vietnam</a>
+                    <br />
+                    <a>Student id: 2321122981</a>
+                    <br />
+                    <a>Email:Buiductinwork@gmail.com</a>
+                </div>
+                <div class="Info">
+                    <h4>ĐẶNG NGỌC DUY</h4>
+                    <a>Address: QuangBinh city - Vietnam</a>
+                    <br />
+                    <a>Student id: 2321120536</a>
+                    <br />
+                    <a>​Email: Duydang9902@gmail.com</a>
+                </div>
+                <div class="Info">
+                    <h4>NGUYỄN HOÀI SƠN</h4>
+                    <a>Address: GiaLai city - Vietnam </a>
+                    <br />
+                    <a>Student id: 2321118094</a>
+                    <br />
+                    <a>Email: Sonbin199915@gmail.com</a>
+                </div>
+                <div class="Info">
+                    <h4>VÕ VĂN KHANG</h4>
+                    <a>Address: QuangNam city - Vietnam </a>
+                    <br />
+                    <a>Student id: 2321123703</a>
+                    <br />
+                    <a>Email: demonthewhite1581999@gmail.com</a>
+                </div>
+                <div class="Info">
+                    <h4>VÕ VĂN AN</h4>
+                    <a>Address: QuangNam city - Vietnam </a>
+                    <br />
+                    <a>Student id: 2321123692</a>
+                    <br />
+                    <a>Email: jukihabac158@gmail.com</a>
+                </div>
+            </div>
+            <!--footer-->
+        </div>
+        </div>
+    </form>
+</body>
+</html>

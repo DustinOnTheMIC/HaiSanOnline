@@ -1,0 +1,26 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="DoAn.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="outer">
+            <div id="top">
+                <img src="imgAD/pic.png" height="100px" width="100%" />
+            </div>
+            <div id="main">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+            </div>
+            <div id="footer">
+                Hiện tại nhóm em đang nuôi 5,6 con AI nên đang trong quá trình phát triển :V 
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,140 @@
+﻿
+.intro {
+    width: 1100px;
+}
+
+.bill {
+    height: auto;
+    width: 1100px;
+    border-top: 1px solid black;
+    float:left;
+}
+.outer {
+
+    margin-bottom: 50px;
+    margin-top: 66px;
+}
+.oneproduct {
+    height: auto;
+    width: 1100px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.left {
+    height: 50px;
+    width: 500px;
+    float:left;
+}
+.right{
+    height:50px;
+    width:500px;
+    float:left;
+
+}
+.soluong {
+    height: 50px;
+    width: 200px;
+    float: left;
+}
+
+.dongia {
+    height: 50px;
+    width: 250px;
+    float:right;
+}
+.lbl2{
+    height:auto;
+    width:auto;
+    border-bottom:1px solid black;
+    float:right;
+    margin-right:50px;
+}
+
+.payform {
+    float:left;
+    margin-top: 50px;
+    height: 500px;
+    width: 1100px;
+    border: 1px solid black;
+}
+
+.form1{
+    height:100%;
+    width:100%;
+    float:left;
+    margin-top:50px;
+}
+
+.rowone{
+    margin-left:90px;
+    height:auto;
+    float:left;
+    width:40%;
+    text-align:left;
+    margin-bottom:30px;
+}
+
+.rowtow {
+    margin-right:90px;
+    height: auto;
+    float: right;
+    width: 40%;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.textbox{
+    border:none;
+    border-bottom:1px solid black;
+    height:30px;
+    width:100%;
+}
+
+.rowthree{
+    margin-left:90px;
+    clear:both;
+    width:84%;
+    margin-top:100px;
+}
+.btn{
+    margin-top:80px;
+    float:right;
+    margin-right:90px;
+    width:auto;
+}
+.btnbuy{
+    border:1px solid black;
+    background:transparent;
+    padding: 5px 30px;
+
+}
+    .btnbuy:hover{
+        background-color:gainsboro;
+        border:none;
+    }
+
+    .visible {
+        color: white;
+        background: transparent;
+    }
+.btndelete {
+    border: none;
+    background: transparent;
+    border: 1px solid black;
+    outline: none;
+}
+.validator{
+    margin-top:20px;
+}
+.onevalidator{
+
+    color:red;
+}
+.btnReturn{
+    float:right;
+}
+.gridview{
+    margin-top:50px;
+    margin-bottom:50px;
+}

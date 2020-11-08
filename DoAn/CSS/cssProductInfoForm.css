@@ -1,0 +1,69 @@
+﻿.outer {
+    height: auto;
+    width: 80%;
+    margin-left: 130px;
+
+    margin-top:50px;
+}
+
+.info {
+    margin-bottom: 40px;
+    float:left;
+    position:relative;
+    width:100%;
+}
+
+.btnaddtocart {
+    float: left;
+    margin-left: 10px;
+    border: 1px solid black;
+    background: transparent;
+    padding: 5px 40px;
+    margin-top: 10px;
+}
+
+    .btnaddtocart:hover {
+        background-color: gainsboro;
+        border:none;
+    }
+
+.quantity {
+    height: 50px;
+    width: 350px;
+}
+
+.droplist {
+    padding: 10px 20px;
+    float: left;
+}
+
+.cart {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btncartview {
+    float: left;
+    text-decoration: none;
+    padding: 5px 20px;
+    border: 1px solid black;
+    color: black;
+}
+
+    .btncartview:hover {
+        background-color:gainsboro;
+        border:none;
+    }
+.image{
+    float:left;
+    margin-left:0;
+    height:auto;
+    position:relative;
+}
+.thongtin{
+    float:right;
+    max-width:50%;
+    position:relative;
+    text-align:left;
+    margin-top:50px;
+}
